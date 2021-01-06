@@ -1,6 +1,84 @@
+/* Reset
+------------------------------ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+/* Game decoration
+------------------------------ */
+body {
+    background: url(./img/bg.jpg) center center / cover no-repeat;
+}
+
+.wrapper {}
+
+.title {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.inner {
+    padding-top: 20px;
+}
+
+.inner__img-1 {}
+
+.inner__playground {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: space-between;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.inner__img-2 {}
+
+/* Card styles
+------------------------------ */
+.card {
+    perspective: 1000px;
+}
+
+.card.hover .flipper { 
+	transform: rotateY(180deg);
+}
+
+.card, .front, .back {
+	width: 120px;
+    height: 160px;
+    border-radius: 8px;
+}
+
+.flipper {
+	position: relative;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+    position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+    background: green;
+
+	z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    background: blue;
+
+    transform: rotateY(180deg);
+}
+
+/* Media styles
+------------------------------ */
