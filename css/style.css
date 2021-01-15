@@ -6,7 +6,11 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
 /* Game decoration
 ------------------------------ */
 body {
@@ -16,7 +20,7 @@ body {
 .wrapper {}
 
 .title {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
     font-family: 'Redressed', cursive;
     font-size: 60px;
@@ -28,7 +32,7 @@ body {
     padding-top: 20px;
 }
 
-.inner__playground {
+.inner__play-area {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -44,7 +48,7 @@ body {
     perspective: 1000px;
 }
 
-.card.hover .flipper { 
+.card.open .flipper { 
 	transform: rotateY(180deg);
 }
 
@@ -68,7 +72,6 @@ body {
 }
 
 .front {
-    border: 1px solid #000;
 	z-index: 2;
     transform: rotateY(180deg);
 }

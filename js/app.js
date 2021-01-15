@@ -1,32 +1,33 @@
 const cardsImage = [
     {
         id: 1,
-        color: 'red'
+        src: 'img/barbossa.jpg'
     },
     {
         id: 2,
-        color: 'blue'
+        src: 'img/jack.jpg'
     },
     {
         id: 3,
-        color: 'green'
+        src: 'img/davy.jpg'
     },
     {
         id: 4,
-        color: 'yellow'
+        src: 'img/will.jpg'
     },
     {
         id: 5,
-        color: 'cyan'
+        src: 'img/elizabeth.jpg'
     },
     {
         id: 6,
-        color: 'orange'
+        src: 'img/teach.jpg'
     }
 ];
+//--------------------------------------------
+const playArea = document.querySelector('#play-area');
 
 //--------------------------------------------
-
 function ShuffleArr(arr) {
     for(let i = 0; i < arr.length; i++) {
         let k = Math.floor( Math.random() * arr.length);
@@ -35,4 +36,31 @@ function ShuffleArr(arr) {
 	return arr;
 }
 
+function createCard(src) {
+    return `
+    <div class="card"> 
+        <div class="flipper"> 
+            <div class="front">
+                <img src="${src}">
+            </div>              
+            <div class="back"></div>                
+        </div>        
+    </div>
+`;
+}
+
+function addCardsToPlayArea(arr) {
+    let cardsArr = arr.concat(arr);
+    let cardsStr = '';
+
+    ShuffleArr(cardsArr).forEach((item) => cardsStr += createCard(item['src']));
+    playArea.innerHTML = cardsStr;
+}
+
 //--------------------------------------------
+function gameStart() {
+    addCardsToPlayArea(cardsImage);
+}
+
+//--------------------------------------------
+gameStart();
