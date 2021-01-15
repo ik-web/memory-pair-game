@@ -6,21 +6,22 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-}
+
 /* Game decoration
 ------------------------------ */
 body {
-    background: url(../img/bg.jpg) center center / cover;
+    background: url(../img/bg.jpg) center center / cover no-repeat;
+    height: 100vh;
 }
 
-.wrapper {}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+}
 
 .title {
-    padding-top: 10px;
     text-align: center;
     font-family: 'Redressed', cursive;
     font-size: 60px;
@@ -29,7 +30,10 @@ body {
 }
 
 .inner {
-    padding-top: 20px;
+    max-width: 880px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 20px 30px;
 }
 
 .inner__play-area {
@@ -37,14 +41,13 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     vertical-align: space-between;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
 }
 
 /* Card styles
 ------------------------------ */
 .card {
+    margin: 10px 0;
+    width: 16.66666%;
     perspective: 1000px;
 }
 
@@ -53,7 +56,7 @@ body {
 }
 
 .card, .front, .back {
-	width: 120px;
+    width: 120px;
     height: 160px;
     border-radius: 8px;
 }
@@ -79,6 +82,13 @@ body {
 .back {
     background: url(../img/card-back.jpg) center center / cover no-repeat;
     transform: rotateY(0deg);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    border-radius: 8px;
 }
 
 /* Media styles

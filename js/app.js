@@ -41,7 +41,7 @@ function createCard(src) {
     <div class="card"> 
         <div class="flipper"> 
             <div class="front">
-                <img src="${src}">
+                <img src="${src}" class="image">
             </div>              
             <div class="back"></div>                
         </div>        
