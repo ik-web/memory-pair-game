@@ -58,8 +58,20 @@ function addCardsToPlayArea(arr) {
 }
 
 //--------------------------------------------
+function clickCard({target}) {
+    let clickTarget = target.closest('div.card')
+    if (!clickTarget) return;
+    clickTarget.classList.add('open');
+}
+
+function openCard() {
+    playArea.addEventListener('click', clickCard);
+}
+
+//--------------------------------------------
 function gameStart() {
     addCardsToPlayArea(cardsImage);
+    openCard();
 }
 
 //--------------------------------------------
