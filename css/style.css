@@ -28,8 +28,6 @@ body {
     padding-top: 20px;
 }
 
-.inner__img-1 {}
-
 .inner__playground {
     display: flex;
     flex-wrap: wrap;
@@ -39,8 +37,6 @@ body {
     height: 500px;
     margin: 0 auto;
 }
-
-.inner__img-2 {}
 
 /* Card styles
 ------------------------------ */
@@ -72,16 +68,14 @@ body {
 }
 
 .front {
-    background: green;
-
+    border: 1px solid #000;
 	z-index: 2;
-    transform: rotateY(0deg);
+    transform: rotateY(180deg);
 }
 
 .back {
-    background: blue;
-
-    transform: rotateY(180deg);
+    background: url(../img/card-back.jpg) center center / cover no-repeat;
+    transform: rotateY(0deg);
 }
 
 /* Media styles
