@@ -103,6 +103,7 @@ function checkWin() {
 
 function endGame() {
     document.querySelector('.off').classList.remove('off');
+    document.querySelector('.title').classList.add('off');
     document.querySelector('.btn').addEventListener('click', () => window.location.reload());
 }
 
