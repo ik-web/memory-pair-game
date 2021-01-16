@@ -30,7 +30,7 @@ const playCardsTotal = cards.length * 2;
 const closeCardsDelay = 800;
 const hideCardsDelay = 100;
 const checkPairDelay = 800;
-const delayEndGame = 500;
+const delayEndGame = 700;
 
 //--------------------------------------------
 function ShuffleArr(arr) {
@@ -102,7 +102,8 @@ function checkWin() {
 }
 
 function endGame() {
-    alert('Victory!!!');
+    document.querySelector('.off').classList.remove('off');
+    document.querySelector('.btn').addEventListener('click', () => window.location.reload());
 }
 
 //--------------------------------------------

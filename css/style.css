@@ -7,6 +7,9 @@
     font-family: sans-serif;
 }
 
+img {
+    width: 100%;
+}
 /* Game decoration
 ------------------------------ */
 body {
@@ -41,6 +44,66 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     vertical-align: space-between;
+}
+
+.victory {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.victory_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.victory__text div{
+    margin-bottom: 40px;
+    font-family: 'Redressed', cursive;
+    font-size: 60px;
+    text-shadow: 0 1px 1px rgb(255, 255, 255);
+    color: #ff0000;
+}
+
+.victory__text div:first-child {
+    margin-bottom: 0;
+}
+
+.btn {
+    background-color: #ff0000;
+    width: 160px;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    box-shadow: none;
+    font-family: 'Redressed', cursive;
+    font-size: 30px;
+    color:rgba(0, 0, 0);
+    transition: color .15s linear, box-shadow .15s linear;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px 0 #fff;
+    color: rgba(255, 255, 255);
+}
+
+.treasure {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.off {
+    display: none;
 }
 
 /* Card styles
