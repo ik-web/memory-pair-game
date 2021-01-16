@@ -26,6 +26,7 @@ const cards = [
 ];
 //--------------------------------------------
 const playArea = document.querySelector('#play-area');
+const gameName = document.querySelector('#title');
 const playCardsTotal = cards.length * 2;
 const closeCardsDelay = 800;
 const hideCardsDelay = 100;
@@ -103,8 +104,9 @@ function checkWin() {
 
 function endGame() {
     document.querySelector('.off').classList.remove('off');
-    document.querySelector('#title').classList.add('off');
     document.querySelector('#btn').addEventListener('click', () => window.location.reload());
+    gameName.classList.add('off');
+    playArea.classList.add('off');
 }
 
 //--------------------------------------------
