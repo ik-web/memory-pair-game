@@ -64,7 +64,7 @@ function addCardsToPlayArea(arr) {
 
 //--------------------------------------------
 function clickCard({target}) {
-    let clickTarget = target.closest('div.card')
+    let clickTarget = target.closest('div.card');
     if (!clickTarget) return;
     clickTarget.classList.add('open');
 
@@ -103,8 +103,8 @@ function checkWin() {
 
 function endGame() {
     document.querySelector('.off').classList.remove('off');
-    document.querySelector('.title').classList.add('off');
-    document.querySelector('.btn').addEventListener('click', () => window.location.reload());
+    document.querySelector('#title').classList.add('off');
+    document.querySelector('#btn').addEventListener('click', () => window.location.reload());
 }
 
 //--------------------------------------------
