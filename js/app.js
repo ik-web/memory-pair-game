@@ -55,11 +55,11 @@ function createCard(id, src) {
 }
 
 function addCardsToPlayArea(arr) {
-    let cardsArr = arr.concat(arr);
-    let cardsStr = '';
+    const playCards = arr.concat(arr);
+    let playCardsToStr = '';
 
-    ShuffleArr(cardsArr).forEach((item) => cardsStr += createCard(item['id'], item['src']));
-    playArea.innerHTML = cardsStr;
+    ShuffleArr(playCards).forEach((item) => playCardsToStr += createCard(item['id'], item['src']));
+    playArea.innerHTML = playCardsToStr;
 }
 
 //--------------------------------------------
