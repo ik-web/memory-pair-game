@@ -34,6 +34,7 @@ body {
 }
 
 .title {
+    margin-bottom: 30px;
     text-align: center;
     font-family: 'Redressed', cursive;
     font-size: 60px;
@@ -46,7 +47,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    padding: 50px 15px 15px;
+    padding: 0 20px;
 }
 
 /* Card styles
@@ -161,7 +162,8 @@ body {
 }
 
 .end-game__img {
-    width: 290px;
+    max-width: 320px;
+    width: 100%;
 }
 
 .off {
@@ -170,4 +172,62 @@ body {
 
 /* Media styles
 ------------------------------ */
+@media (max-width: 991px) {
 
+    .inner {
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .inner {
+        max-width: 440px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .inner {
+        max-width: 375px;
+    }
+
+    .card, .front, .back {
+        width: 100px;
+        height: 134px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .inner {
+        max-width: 320px;
+    }
+
+    .title {
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+
+    .card, .front, .back {
+        width: 80px;
+        height: 107px;
+    }
+
+    .end-game__text p {
+        font-size: 40px;
+    }
+}
+
+@media (max-height: 540px) {
+
+    .wrapper {
+        height: 100%;
+        padding: 20px 0;
+    }
+}
