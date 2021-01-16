@@ -86,10 +86,9 @@ function checkPair() {
         
         if (pair[0].getAttribute('data-id') === pair[1].getAttribute('data-id')) {
             hideCards(pair);
-            closeCards(pair);
-        } else {
-            closeCards(pair);
         }
+        
+        closeCards(pair);
     }
     setTimeout(playGame, checkPairDelay);
 }
