@@ -18,7 +18,7 @@ img {
 /* Game decoration
 ------------------------------ */
 .wrapper {
-    background: url(../img/bg.jpg) center center / cover no-repeat;
+    background: #8d835f url(../img/bg.jpg) center center / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
