@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.off').classList.remove('off');
         document.querySelector('#btn').addEventListener('click', () => window.location.reload());
         gameName.classList.add('off');
-        playArea.classList.add('off');
     }
     
     //--------------------------------------------
@@ -139,4 +138,3 @@ document.addEventListener("DOMContentLoaded", () => {
     gameStart();
 
 });
-
