@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function addCardsToPlayArea(cards) {
         const playCards = cards.concat(cards);
-        console.log(playCards);
         let ShuffledCards = '';
     
         ShuffleArr(playCards).forEach((playCard) => ShuffledCards += createCard(playCard.id, playCard.src));
