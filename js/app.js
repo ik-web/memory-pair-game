@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const playCardsTotal = cards.length * 2;
 
     const checkPairDelay = 800;
-    const closeCardsDelay = 700;
-    const hideCardsDelay = 500;
-    const delayEndGame = 1000;
+    const closeCardsDelay = 800;
+    const hideCardsDelay = 600;
+    const delayEndGame = 900;
     
     //--------------------------------------------
     function ShuffleArr(arr) {
