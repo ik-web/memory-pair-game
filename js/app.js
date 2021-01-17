@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const checkPairDelay = 800;
     const closeCardsDelay = 700;
-    const hideCardsDelay = 100;
+    const hideCardsDelay = 500;
     const delayEndGame = 1000;
     
     //--------------------------------------------
